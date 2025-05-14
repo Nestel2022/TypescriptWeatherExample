@@ -3,10 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Webpack Weather</title>
+    <title>Clima con Webpack</title>
 </head>
 <body>
-            <div class="container">
+            <div class="container">                
                 <div class="weather-side">
                     <div class="weather-gradient"></div>
                     <div class="date-container">
@@ -26,21 +26,32 @@
                             <div class="precipitation"> <span class="title">MIN TEMP</span><span id="text-temp-min" class="value">- ºC</span>
                                 <div class="clear"></div>
                             </div>
-                            <div class="humidity"> <span class="title">HUMIDITY</span><span id="text-humidity" class="value">- %</span>
+                            <div class="humidity"> <span class="title">HUMEDAD</span><span id="text-humidity" class="value">- %</span>
                                 <div class="clear"></div>
                             </div>
-                            <div class="wind"> <span class="title">WIND</span><span id="text-wind" class="value">- m/s</span>
+                            <div class="wind"> <span class="title">VIENTO</span><span id="text-wind" class="value">- m/s</span>
                                 <div class="clear"></div>
                             </div>
                         </div>
                     </div>
-
-                    <div class="location-container"><button id="button-location" class="location-button"><span>Change location</span></button></div>
+                    <div class="location-container">
+                        <div id="spinner" class="spinner" style="display: none;">Cargando...</div>
+                        <button id="button-location" class="location-button"><span>Cambiar ubicación</span></button>
+                    </div>                   
 
                     <div class="location-container-input"><input placeholder="city..." id="weather-location-input" class="location-input"> </input></div>
                 </div>
             </div>
 
-    </div>
+            <div id="alert-container" class="alert-container" style="display: none;">
+                <div class="alert-box">
+                    <span id="alert-message" class="alert-message">Error message goes here</span>
+                    <button id="alert-close-button" class="alert-close-button">X</button>
+                </div>
+            </div>
+            
+
+
+    
 </body>
 </html>
